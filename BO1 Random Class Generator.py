@@ -423,34 +423,65 @@ def generate():
     
     K3 = random.choice(K_List)
     
-    if Killstreaks[K1] > Killstreaks[K2]:
-        if Killstreaks[K1] > Killstreaks[K3]:
-            if Killstreaks[K2] > Killstreaks[K3]:
-                print(f"({Killstreaks[K3]}) " + K3)
+    if P1 == "Hardline":
+        if Killstreaks[K1] > Killstreaks[K2]:
+            if Killstreaks[K1] > Killstreaks[K3]:
+                if Killstreaks[K2] > Killstreaks[K3]:
+                    print(f"({Killstreaks[K3] - 1}) " + K3)
+                    print(f"({Killstreaks[K2] - 1}) " + K2)
+                    print(f"({Killstreaks[K1] - 1}) " + K1)
+                elif Killstreaks[K2] < Killstreaks[K3]:
+                    print(f"({Killstreaks[K2] - 1}) " + K2)
+                    print(f"({Killstreaks[K3] - 1}) " + K3)
+                    print(f"({Killstreaks[K1] - 1}) " + K1)
+            elif Killstreaks[K1] < Killstreaks[K3]:
+                print(f"({Killstreaks[K2] - 1}) " + K2)
+                print(f"({Killstreaks[K1] - 1}) " + K1)
+                print(f"({Killstreaks[K3] - 1}) " + K3)
+        elif Killstreaks[K1] < Killstreaks[K2]:
+            if Killstreaks[K2] < Killstreaks[K3]:
+                print(f"({Killstreaks[K1] - 1}) " + K1)
+                print(f"({Killstreaks[K2] - 1}) " + K2)
+                print(f"({Killstreaks[K3] - 1}) " + K3)
+            elif Killstreaks[K2] > Killstreaks[K3]:
+                if Killstreaks[K1] < Killstreaks[K3]:
+                    print(f"({Killstreaks[K1] - 1}) " + K1)
+                    print(f"({Killstreaks[K3] - 1}) " + K3)
+                    print(f"({Killstreaks[K2] - 1}) " + K2)
+                elif Killstreaks[K1] > Killstreaks[K3]:
+                    print(f"({Killstreaks[K3] - 1}) " + K3)
+                    print(f"({Killstreaks[K1] - 1}) " + K1)
+                    print(f"({Killstreaks[K2] - 1}) " + K2)
+
+    else:
+        if Killstreaks[K1] > Killstreaks[K2]:
+            if Killstreaks[K1] > Killstreaks[K3]:
+                if Killstreaks[K2] > Killstreaks[K3]:
+                    print(f"({Killstreaks[K3]}) " + K3)
+                    print(f"({Killstreaks[K2]}) " + K2)
+                    print(f"({Killstreaks[K1]}) " + K1)
+                elif Killstreaks[K2] < Killstreaks[K3]:
+                    print(f"({Killstreaks[K2]}) " + K2)
+                    print(f"({Killstreaks[K3]}) " + K3)
+                    print(f"({Killstreaks[K1]}) " + K1)
+            elif Killstreaks[K1] < Killstreaks[K3]:
                 print(f"({Killstreaks[K2]}) " + K2)
                 print(f"({Killstreaks[K1]}) " + K1)
-            elif Killstreaks[K2] < Killstreaks[K3]:
-                print(f"({Killstreaks[K2]}) " + K2)
                 print(f"({Killstreaks[K3]}) " + K3)
-                print(f"({Killstreaks[K1]}) " + K1)
-        elif Killstreaks[K1] < Killstreaks[K3]:
-            print(f"({Killstreaks[K2]}) " + K2)
-            print(f"({Killstreaks[K1]}) " + K1)
-            print(f"({Killstreaks[K3]}) " + K3)
-    elif Killstreaks[K1] < Killstreaks[K2]:
-        if Killstreaks[K2] < Killstreaks[K3]:
-            print(f"({Killstreaks[K1]}) " + K1)
-            print(f"({Killstreaks[K2]}) " + K2)
-            print(f"({Killstreaks[K3]}) " + K3)
-        elif Killstreaks[K2] > Killstreaks[K3]:
-            if Killstreaks[K1] < Killstreaks[K3]:
-                print(f"({Killstreaks[K1]}) " + K1)
-                print(f"({Killstreaks[K3]}) " + K3)
-                print(f"({Killstreaks[K2]}) " + K2)
-            elif Killstreaks[K1] > Killstreaks[K3]:
-                print(f"({Killstreaks[K3]}) " + K3)
+        elif Killstreaks[K1] < Killstreaks[K2]:
+            if Killstreaks[K2] < Killstreaks[K3]:
                 print(f"({Killstreaks[K1]}) " + K1)
                 print(f"({Killstreaks[K2]}) " + K2)
+                print(f"({Killstreaks[K3]}) " + K3)
+            elif Killstreaks[K2] > Killstreaks[K3]:
+                if Killstreaks[K1] < Killstreaks[K3]:
+                    print(f"({Killstreaks[K1]}) " + K1)
+                    print(f"({Killstreaks[K3]}) " + K3)
+                    print(f"({Killstreaks[K2]}) " + K2)
+                elif Killstreaks[K1] > Killstreaks[K3]:
+                    print(f"({Killstreaks[K3]}) " + K3)
+                    print(f"({Killstreaks[K1]}) " + K1)
+                    print(f"({Killstreaks[K2]}) " + K2)
     print()
 
 generate()
